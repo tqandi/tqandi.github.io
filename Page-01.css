@@ -1,0 +1,156 @@
+
+
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 400px; */
+    background-color: rgba(0, 0, 0, 0.71);
+    border-radius: 10px;
+    width: 70vw;
+    height: 33vw;
+    position: relative;
+    padding: 2%;
+    
+    animation-name: main_appear_on_start;
+    animation-duration: 3s;
+    
+  }
+  .inner img {
+    /* position: absolute; */
+    /* top: 0vw; */
+    /* left: 0vw; */
+    width: 12vw;
+    height: 12vw;
+    float: left;
+    animation-name: image_appear_on_start;
+    animation-duration: 3s;
+  }
+  
+  @keyframes main_appear_on_start {
+    0% {background-color: rgba(0, 0, 0, 0);}
+    100% {background-color: rgba(0, 0, 0, 0.71);}
+  }
+  @keyframes image_appear_on_start {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  a.button1{
+      display: inline-block;
+      padding: 0.35em 1.2em;
+      border: 0.1em solid #ffffff;
+      margin: 0.6em 0.6em 0.6em 0.6em;
+      border-radius: 0.12em;
+      box-sizing:content-box;
+      text-decoration: none;
+      font-family: 'Roboto' sans-serif;
+      font-weight: 300;
+      color: #ffffff;
+      text-align: center;
+      transition: all 0.2s;
+      position: absolute;
+      right: 2vw;
+      bottom: 1vw;
+      
+     
+  }
+  a.button1:hover {
+      color: #000000;
+      background-color: #ffffff;
+  }
+  @media all and (max-width:30em) {
+      a.button1{
+          display: block;
+          margin: 0.5em auto;
+      }
+  }
+
+
+
+  /* #video-background {
+      position: fixed;
+      z-index: -1;
+  } */
+
+  /* button_gradient {
+    border-radius: 4px;
+    background: linear-gradient(to right, #67b26b, #6c0f88);
+    border: none;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  .button_gradient span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.4s;
+  }
+  .button_gradient span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button_gradient:hover span {
+    padding-right: 25px;
+  }
+  .button_gradient:hover span:after {
+    opacity: 1;
+    right: 0;
+  } */
+
+
+  .videoBgWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+.videoBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (min-aspect-ratio: 16/9) {
+    .videoBg{
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .videoBg {
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  
