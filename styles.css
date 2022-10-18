@@ -12,6 +12,21 @@
   font-family: Neon;
   src: url(neon.ttf);
 }
+@font-face {
+  font-family: Metropolis;
+  src: url(Metropolis-Regular.otf);
+}
+
+@font-face {
+  font-family: Coco;
+  src: url(Coco-Gothic-Regular-trial.ttf);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Coco;
+  src: url(Coco-Gothic-Fat-trial.ttf);
+  font-weight: bold;
+}
 
 body {
   background-color: #051818;
@@ -118,6 +133,7 @@ header {
   order: 2;
   margin-top: 5px;
 }
+
 .item-section-content {
 
   order: 2;
@@ -127,6 +143,7 @@ header {
   margin-left: auto;
   margin-right: 0;
 }
+
 .about-image {
   order: 1;
 }
@@ -143,31 +160,59 @@ header {
   display: block;
 }
 
-.section-heading {
+.section-heading{
   position: relative;
   display: block;
   margin-bottom: 20px;
-  font-family: 'Playfair Display SC', sans-serif;
+  /* font-family: 'Playfair Display SC', sans-serif; */
+  font-family: Coco bold;
+  border: 1px solid rgb(255, 189, 105);
+  
 }
-
-.description-heading {
+.inner-item-heading{
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  /* font-family: 'Playfair Display SC', sans-serif; */
+  font-family: Coco bold;
+  border: 1px solid rgb(255, 189, 105);
+  
+}
+.top-heading{
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+  /* font-family: 'Playfair Display SC', sans-serif; */
+  font-family: Metropolis;
+  color: rgb(255, 189, 105);
+  /* border: 1px solid rgb(255, 189, 105); */
+  
+}
+.description-heading{
   color: rgb(255, 189, 105);
   position: relative;
   display: block;
   margin-bottom: 20px;
-  font-family: 'Playfair Display SC', sans-serif;
+  font-family: Coco bold;
 }
 
 .section-description {
   color: rgb(255, 189, 105);
   font-size: large;
+  font-family: Metropolis;
 }
 
 .heading-title {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   /* color: #384147; */
   color: rgb(255, 189, 105);
+  font-family: Coco;
   font-size: 30px;
+}
+.inner-item-title{
+  color: rgb(255, 189, 105);
+  font-family: Coco;
+  font-size: medium;
 }
 
 .lightbox-content {
@@ -237,7 +282,7 @@ header {
   margin-right: 12px;
   display: inline-block;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: Coco;
   min-width: 120px;
 }
 
@@ -307,3 +352,27 @@ header {
 .carousel-control-next-icon {
  filter: invert(50%);
 } */
+
+.about-col {
+  /* background: #97BC62FF; */
+  /* border: 1px solid #97BC62FF; */
+  justify-content: center;
+  text-align: center;
+}
+
+.about-image-card {
+  width: 100%;
+  height: auto;
+}
+
+.about-heading {
+
+  font-size: 40px;
+  font-family: Neon;
+  margin-bottom: 30px;
+  color: #83c5be;
+}
+.card-text{
+  font-family: Coco;
+  color: #83c5be;
+}
