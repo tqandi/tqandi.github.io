@@ -63,8 +63,9 @@ body {
 }
 
 .hero-avatar {
-    width: 400px;
-    height: 400px;
+    width: 80%;
+    max-width: 400px;
+    height: auto;
     object-fit: cover;
     filter: drop-shadow(0 0 15px var(--glow-color-1));
     margin-bottom: 2rem;
@@ -118,7 +119,6 @@ body {
 .glitch::before {
     left: 2px;
     text-shadow: -2px 0 var(--secondary-color);
-    clip: rect(44px, 450px, 56px, 0);
     animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
@@ -139,8 +139,8 @@ body {
 }
 
 /* Add full glitch keyframes */
-@keyframes glitch-anim{0%{clip:rect(29px,9999px,95px,0)}10%{clip:rect(45px,9999px,10px,0)}20%{clip:rect(5px,9999px,85px,0)}30%{clip:rect(30px,9999px,16px,0)}40%{clip:rect(5px,9999px,98px,0)}50%{clip:rect(3px,9999px,56px,0)}60%{clip:rect(28px,9999px,100px,0)}70%{clip:rect(2px,9999px,67px,0)}80%{clip:rect(38px,9999px,4px,0)}90%{clip:rect(19px,9999px,89px,0)}100%{clip:rect(5px,9999px,98px,0)}}
-@keyframes glitch-anim-2{0%{clip:rect(4px,9999px,100px,0)}10%{clip:rect(22px,9999px,75px,0)}20%{clip:rect(35px,9999px,44px,0)}30%{clip:rect(1px,9999px,79px,0)}40%{clip:rect(3px,9999px,40px,0)}50%{clip:rect(12px,9999px,82px,0)}60%{clip:rect(34px,9999px,17px,0)}70%{clip:rect(42px,9999px,52px,0)}80%{clip:rect(2px,9999px,78px,0)}90%{clip:rect(45px,9999px,32px,0)}100%{clip:rect(5px,9999px,91px,0)}}
+@keyframes glitch-anim{0%{clip-path:inset(29% 0 6% 0)}10%{clip-path:inset(10% 0 90% 0)}20%{clip-path:inset(5% 0 15% 0)}30%{clip-path:inset(30% 0 84% 0)}40%{clip-path:inset(5% 0 2% 0)}50%{clip-path:inset(3% 0 44% 0)}60%{clip-path:inset(28% 0 0 0)}70%{clip-path:inset(2% 0 33% 0)}80%{clip-path:inset(38% 0 96% 0)}90%{clip-path:inset(19% 0 11% 0)}100%{clip-path:inset(5% 0 9% 0)}}
+@keyframes glitch-anim-2{0%{clip-path:inset(4% 0 0 0)}10%{clip-path:inset(22% 0 25% 0)}20%{clip-path:inset(35% 0 56% 0)}30%{clip-path:inset(1% 0 21% 0)}40%{clip-path:inset(3% 0 60% 0)}50%{clip-path:inset(12% 0 18% 0)}60%{clip-path:inset(34% 0 83% 0)}70%{clip-path:inset(42% 0 48% 0)}80%{clip-path:inset(2% 0 22% 0)}90%{clip-path:inset(45% 0 68% 0)}100%{clip-path:inset(5% 0 9% 0)}}
 @keyframes glitch-skew{0%{transform:skew(0)}5.1%{transform:skew(2deg)}10.1%{transform:skew(-3deg)}15.1%{transform:skew(1deg)}20.1%{transform:skew(-1deg)}25.1%{transform:skew(2deg)}30.1%{transform:skew(0)}35.1%{transform:skew(-4deg)}40.1%{transform:skew(3deg)}45.1%{transform:skew(0)}50.1%{transform:skew(1deg)}55.1%{transform:skew(-2deg)}60.1%{transform:skew(0)}65.1%{transform:skew(-3deg)}70.1%{transform:skew(4deg)}75.1%{transform:skew(-2deg)}80.1%{transform:skew(0)}85.1%{transform:skew(2deg)}90.1%{transform:skew(-1deg)}95.1%{transform:skew(0)}100%{transform:skew(0)}}
 
 
@@ -231,7 +231,7 @@ body {
     gap: 1.5rem;
 }
 
-.grid-container.halves { grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
+.grid-container.halves { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-container.thirds { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .grid-container { grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
 
@@ -380,6 +380,10 @@ footer {
 @media (max-width: 768px) {
     .glitch { font-size: 3rem; }
     .hero-subtitle { font-size: 1.2rem; }
+    .hero-avatar {
+        width: 60%;
+        max-width: 250px;
+    }
     .about-container, .publication-item { flex-direction: column; }
     .grid-container.halves, .grid-container.thirds, .grid-container { grid-template-columns: 1fr; }
 }
